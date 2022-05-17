@@ -19,11 +19,11 @@
 
 #### NumPy
 
-[视频—一个10分钟的numpy入门教程](detail/python/一个10分钟的numpy入门教程.md)  B站up 奇乐编程学院
+[【🚀】视频—一个10分钟的numpy入门教程](detail/python/一个10分钟的numpy入门教程.md)  B站up 奇乐编程学院
 
 #### Pandas
 
-[菜鸟教程—Pandas](detail/python/菜鸟教程—Pandas.md)
+[【🚀】菜鸟教程—Pandas](detail/python/菜鸟教程—Pandas.md)
 
 ### 电子书
 

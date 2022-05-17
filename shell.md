@@ -1,2 +1,2 @@
-[MIT missing-semester](detail/shell/MIT.md)
+[【🚀】MIT missing-semester](detail/shell/MIT.md)
 
