@@ -29,21 +29,37 @@
 
 《From Python to Numpy》https://www.labri.fr/perso/nrougier/from-python-to-numpy/
 
-## scikit-learn（即sklearn）
+
+
+## 终端显示：Rich
+
+[【🚀】Rich参考文档](detail/python/Rich参考文档.md)
+
+
+
+## 机器学习：scikit-learn（即sklearn）
 
 
 
 
 
+## 文本表示：Gensim 
+
+[【🚀】Gensim使用](detail/python/Gensim使用.md)
 
 
 
 
 
+## 绘制图表：Pyecharts
 
 
 
+## 命令行工具：Typer
 
+
+
+## 参数管理：OmegaConf、Hydra
 
 
 
