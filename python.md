@@ -1,8 +1,12 @@
 # Python基础
 
-
+[【🚀】Python小技巧](detail/python/Python小技巧.md)
 
 # 常用库
+
+## Collections
+
+
 
 ## NumPy & Pandas、SciPy、Matplotlib
 
@@ -28,6 +32,10 @@
 ### 电子书
 
 《From Python to Numpy》https://www.labri.fr/perso/nrougier/from-python-to-numpy/
+
+
+
+## 包管理系统：conda
 
 
 

@@ -19,7 +19,7 @@
 注：新构造modules的参数默认`requires_gradj=True`
 
 ```python
->>> x = Variable(torch.randn(5, 5))
+>>> x = Variable(torch.randn(5, 5)) #Variable用法已经过时
 >>> y = Variable(torch.randn(5, 5))
 >>> z = Variable(torch.randn(5, 5), requires_grad=True)
 >>> a = x + y
