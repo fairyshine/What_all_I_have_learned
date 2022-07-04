@@ -44,6 +44,7 @@ PyTorch是使用GPU和CPU优化的深度学习张量库。
     -  [1中文情感分类.ipynb](detail/PyTorch/实战_Transformers库快速上手/1中文情感分类.ipynb) 
     -  [2中文填空.ipynb](detail/PyTorch/实战_Transformers库快速上手/2中文填空.ipynb) 
     -  [3中文句子关系推断.ipynb](detail/PyTorch/实战_Transformers库快速上手/3中文句子关系推断.ipynb) 
+    -  [4Trainer再训练.ipynb](detail/PyTorch/实战_Transformers库快速上手/4Trainer再训练.ipynb) 
 
 
 

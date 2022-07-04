@@ -2,4 +2,6 @@ pic/
 detail/**/pic/
 detail/**/**/pic/
 
+detail/**/resources/
+
 detail/**/.ipynb_checkpoints/

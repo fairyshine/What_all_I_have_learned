@@ -1,8 +1,14 @@
 # Python基础
 
-[【🚀】Python小技巧](detail/python/Python小技巧.md)
+[【🍰】Python知识点](detail/python/Python知识点.md)
+
+[【🍔】Python小技巧](detail/python/Python小技巧.md)
 
 # 常用库
+
+## 标准库
+
+[【📖】Python标准库研究](detail/python/Python标准库研究.md)
 
 ## Collections
 
@@ -35,23 +41,23 @@
 
 
 
-## 包管理系统：conda
+# 包管理系统：conda
 
 
 
-## 终端显示：Rich
+# 终端显示：Rich
 
 [【🚀】Rich参考文档](detail/python/Rich参考文档.md)
 
 
 
-## 机器学习：scikit-learn（即sklearn）
+# 机器学习：scikit-learn（即sklearn）
 
 
 
 
 
-## 文本表示：Gensim 
+# 文本表示：Gensim 
 
 [【🚀】Gensim使用](detail/python/Gensim使用.md)
 
@@ -59,22 +65,29 @@
 
 
 
-## 绘制图表：Pyecharts
+# 绘制图表：Pyecharts
 
 
 
-## 命令行工具：Typer
+# 命令行工具：Typer
 
 
 
-## 参数管理：OmegaConf、Hydra
+# 参数管理：OmegaConf、Hydra
 
 
 
-## 图形库
+# 图形库
 
 Pyside6 做GUI
 
 
 
 OpenGL 底层
+
+# Module分发：setuptools
+
+[【🐰】setuptools研究](detail/python/setuptools研究.md)
+
+# 打包： Pyinstaller
+

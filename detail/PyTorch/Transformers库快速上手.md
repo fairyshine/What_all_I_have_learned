@@ -329,6 +329,84 @@ https://huggingface.co/docs/transformers/pipeline_tutorial
 
 # Trainer-再训练api
 
+1 数据集
+
+dataset_train
+
+dataset_test 
+
+2 模型
+
+```python
+from transformers import AutoModelForSequenceClassification
+
+#加载模型
+model = AutoModelForSequenceClassification.from_pretrained('bert-base-cased',
+                                                           num_labels=2)
+```
+
+3 评价函数
+
+```python
+import numpy as np
+from datasets import load_metric
+from transformers.trainer_utils import EvalPrediction
+
+#加载评价函数
+metric = load_metric('accuracy')
+
+#定义评价函数
+def compute_metrics(eval_pred):
+    logits, labels = eval_pred
+    logits = logits.argmax(axis=1)
+    return metric.compute(predictions=logits, references=labels)
+```
+
+4 设置参数，并初始化Trainer
+
+```python
+from transformers import TrainingArguments, Trainer
+
+#初始化训练参数
+args = TrainingArguments(output_dir='./output_dir', evaluation_strategy='epoch')
+args.num_train_epochs = 1
+args.learning_rate = 1e-4
+args.weight_decay = 1e-2
+args.per_device_eval_batch_size = 32
+args.per_device_train_batch_size = 16
+
+#初始化训练器
+trainer = Trainer(
+    model=model,
+    args=args,
+    train_dataset=dataset_train,
+    eval_dataset=dataset_test,
+    compute_metrics=compute_metrics,
+)
+```
+
+5 训练、保存模型
+
+```python
+#评价模型
+trainer.evaluate()
+
+#训练
+trainer.train()
+
+#评价模型
+trainer.evaluate()
+
+#保存模型
+trainer.save_model(output_dir='./output_dir')
+```
+
+6 使用
+
+```python
+model.load_state_dict(torch.load('./output_dir/pytorch_model.bin'))
+```
+
 
 
 # 实战任务
@@ -338,4 +416,6 @@ https://huggingface.co/docs/transformers/pipeline_tutorial
 ## 2 中文填空
 
 ## 3 中文句子关系推断
+
+## 4 Trainer再训练
 
