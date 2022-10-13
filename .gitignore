@@ -1,0 +1,8 @@
+pic/
+detail/**/pic/
+detail/**/**/pic/
+
+resources/
+detail/**/resources/
+
+detail/**/.ipynb_checkpoints/
