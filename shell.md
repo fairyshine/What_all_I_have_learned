@@ -42,7 +42,7 @@ SLURM 作业调度系统
 
 默认存储在~/.ssh/内
 
-生成密钥：ssh-keygen -t rsa -C "备注名称"
+生成密钥：ssh-keygen -t ed25519 -C "备注名称"
 
 启动密钥保管器：ssh-agent -s
 
