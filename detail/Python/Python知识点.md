@@ -57,9 +57,9 @@ kwargs is:  {'name': 'jyz', 'gender': 'male'}
 
 
 
-# @——装饰器/修饰器
+# @,decorator——装饰器/修饰器
 
-参考：https://zhuanlan.zhihu.com/p/109078881
+
 
 ## 无参装饰器
 
@@ -69,12 +69,17 @@ kwargs is:  {'name': 'jyz', 'gender': 'male'}
 
 func=decorator(func)
 
+### 无参函数
+
 ```python
 def decorator(func):
     def wrapper(): # 引用外部作用域的变量func
-        #装饰器内容
+        #装饰器内容1
         #。。。
-        return func()
+        result=func() #无返回值直接func()
+        #装饰器内容2
+        #。。。
+        return result  #可选，针对有返回值的func
     return wrapper
  
 #错误举例：
@@ -85,14 +90,21 @@ def decorator(func): # 通过参数接收外部的值
 #违反了不能修改被装饰对象调用方式的原则
 ```
 
+### 有参函数
+
 函数：func(*args,**kwargs)
 
 ```python
 def decorator(func):
     def wrapper(*args,**kwargs): # 引用外部作用域的变量func
-        #装饰器内容
+        #装饰器内容1
         #。。。
-        return func(*args,**kwargs)
+        result=func(*args,**kwargs)#无返回值则func(*args,**kwargs)
+        #装饰器内容2
+        #。。。
+        return result  #可选，针对有返回值的func
+    wrapper.__doc__=func.__doc__   #9,10行不加的话不影响使用
+    wrapper.__name__=func.__name__ #但是查看fun的对应信息会变成wrapper
     return wrapper
 ```
 
@@ -153,6 +165,9 @@ def auth(name):
 
 
 
+参考：
+	https://zhuanlan.zhihu.com/p/109078881
+
 # 关于类的细节
 
 ```python
@@ -189,9 +204,25 @@ class ...():
 
 # copy() & deepcopy()
 
-对于简单的 object，用 shallow copy 和 deep copy 没区别
-复杂的 object， 如 list 中套着 list 的情况，shallow copy 中的 子list，并未从原 object 真的「独立」出来。也就是说，如果你改变原 object 的子 list 中的一个元素，你的 copy 就会跟着一起变。这跟我们直觉上对「复制」的理解不同。
+对于简单的 object：
+	用 shallow copy 和 deep copy 没区别
+对于复杂的 object：
+	如 list 中套着 list 的情况，shallow copy 中的 子list，并未从原 object 真的「独立」出来。也就是说，如果你改变原 object 的子 list 中的一个元素，你的 copy 就会跟着一起变。这跟我们直觉上对「复制」的理解不同。
 原文链接：https://blog.csdn.net/qq_32907349/article/details/52190796
 
 
+
+# lambda表达式
+
+本质：仅需一行的函数
+
+```python
+def f(x):
+	return x * x
+f = lambda x: x*x
+
+def g(x,y):
+	return x + y
+g = lambda x,y: x+y
+```
 

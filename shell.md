@@ -51,4 +51,3 @@ SLURM 作业调度系统
 将生成的对应密钥文件加入保管器：ssh-add ~/.ssh/github_rsa
 
 查看目前保管器中的密钥：ssh-add -l
-
