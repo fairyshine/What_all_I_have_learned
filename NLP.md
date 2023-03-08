@@ -1,7 +1,5 @@
 [【🚀总结】NLP日常实践经验](detail/NLP/个人NLP实践经验.md)
 
-
-
 [【🚀笔记】CS224N](detail/NLP/CS224N-2019/CS224N笔记.md)
 
 
@@ -10,16 +8,9 @@
 
 Pre-training Models，NLP相关预训练语言模型
 
+[【🎩总结】PTM-NLP](detail/NLP/PTM-NLP总结.md)
+
 [【🚀资料】-PTM-NLP概览](detail/NLP/PTM概览.md)
-
-
-
-![NLP范式变迁](pic/NLP范式变迁.jpg)
-
-1. Feature Engineering：即使用文本特征，例如词性，长度等，在使用机器学习的方法进行模型训练。（无预训练语言模型）
-2. Architecture Engineering：在W2V基础上，利用深度模型，加上固定的embedding。（有固定预训练embedding，但与下游任务无直接关系）
-3. Objective Engineering：在bert 的基础上，使用动态的embedding，在加上fine-tuning。（有预训练语言模型，但与下游任务有gap）
-4. Prompt Engineering：直接利用与训练语言模型辅以特定的prompt。（有预训练语言模型，但与下游任务无gap）
 
 
 
@@ -27,12 +18,7 @@ Pre-training Models，NLP相关预训练语言模型
 
 [【🚀资料】提示学习概览](detail/NLP/提示学习概览.md)
 
-[综述]鹏飞大神的Pre-train, Prompt, and Predict [1] - 迷途小书僮的文章 - 知乎 https://zhuanlan.zhihu.com/p/396098543
-【NLP】Prompt Learning 超强入门教程 - sergio的文章 - 知乎 https://zhuanlan.zhihu.com/p/442486331
-NLP 里 prompt engineering （设计一个问题的背景提示）有多重要? - 知乎 https://www.zhihu.com/question/439114659
-一个小白如何学好prompt tuning? - 知乎 https://www.zhihu.com/question/509079916
-Prompt 如何更好地应用于工业界？ - 知乎 https://www.zhihu.com/question/495040812
-近代自然语言处理技术发展的“第四范式” - 刘鹏飞的文章 - 知乎 https://zhuanlan.zhihu.com/p/395115779
+
 
 # --任务--
 

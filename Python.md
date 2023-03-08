@@ -10,9 +10,12 @@
 
 [【📖总结】Python标准库研究](detail/Python/Python标准库研究.md)
 
-## Collections
+pdb:调试 延伸—ipdb vpdb
 
+Collections:集合类
 
+pickle:Python对象文件读写
+	dump 、 load
 
 ## NumPy & Pandas、SciPy、Matplotlib
 
@@ -35,9 +38,17 @@
 
 [【🚀教程】菜鸟教程—Pandas](detail/Python/菜鸟教程—Pandas.md)
 
+可视化——lux库：pandas数据的制图
+
 ### 电子书
 
 《From Python to Numpy》https://www.labri.fr/perso/nrougier/from-python-to-numpy/
+
+## 数据结构
+
+### sortedcontainers
+
+排序
 
 ## 包管理系统：conda
 
@@ -94,6 +105,8 @@ OpenGL 底层
 ### Selenium-WEB自动化
 
 [【🚀资料】Selenium使用](detail/Python/Selenium使用.md)
+
+
 
 # 项目代码的组织管理
 

@@ -9,3 +9,8 @@ def similarity(a, b):
 print(similarity('苏州大学', '位于苏州的大学'))
 ```
 
+
+
+
+
+eval():字符串格式的元组转化为元组

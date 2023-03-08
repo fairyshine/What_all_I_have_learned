@@ -1,5 +1,12 @@
 # 资料汇总
 
+![NLP范式变迁](pic/NLP范式变迁.jpg)
+
+1. Feature Engineering：即使用文本特征，例如词性，长度等，在使用机器学习的方法进行模型训练。（无预训练语言模型）
+2. Architecture Engineering：在W2V基础上，利用深度模型，加上固定的embedding。（有固定预训练embedding，但与下游任务无直接关系）
+3. Objective Engineering：在bert 的基础上，使用动态的embedding，在加上fine-tuning。（有预训练语言模型，但与下游任务有gap）
+4. Prompt Engineering：直接利用与训练语言模型辅以特定的prompt。（有预训练语言模型，但与下游任务无gap）
+
 
 
 # 1 自编码、自回归的语言模型
@@ -130,3 +137,11 @@ https://zhuanlan.zhihu.com/p/432950958
 对比式无监督预训练简介（Contrastive Pre-training）
 
 🔗：https://zhuanlan.zhihu.com/p/463840977
+
+
+
+# PTM分类资料
+
+## BERT
+
+为什么 Bert 的三个 Embedding 可以进行相加？ - 苏剑林的回答 - 知乎 https://www.zhihu.com/question/374835153/answer/1042845667

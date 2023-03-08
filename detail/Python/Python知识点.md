@@ -57,7 +57,7 @@ kwargs is:  {'name': 'jyz', 'gender': 'male'}
 
 
 
-# @,decorator——装饰器/修饰器
+# @ : decorator ——装饰器/修饰器
 
 
 
@@ -163,10 +163,88 @@ def auth(name):
     return decorator
 ```
 
+## 特殊装饰器
+
+### @property & @\*.setter & @\*.deleter
+
+@property定义只读属性，@setter定义可读可写属性，@deleter定义可读可写可删除属性
+
+我们可以使用@property装饰器来创建**只读属性**，@property装饰器会将**方法**转换为相同名称的**只读属性**,可以与所定义的属性配合使用，这样可以防止属性被修改。
+
+```python
+class Student():
+    def __init__(self, name):
+        self._name = name
+    @property
+    def sname(self):
+        return self._name
+stu = Student('xiaoming')
+print(stu.sname)
+#xiaoming
+```
+
+如果这时你想修改sname属性，使用语句`stu.sname='zhangsan'`，你会发现报错
+
+转而使用@函数名.setter，可以重新设置属性值
+
+```python
+class Student():
+    def __init__(self, name):
+        self._name = name
+    @property
+    def sname(self):
+        return self._name
+    @sname.setter
+    def sname(self, value):
+        self._sname = value
+stu = Student('xiaoming')
+stu.sname='zhangsan'
+print(stu.sname)
+#xiaoming
+```
+
+### @classmethod
+
+@classmethod将对象方法转化成类方法，并注意类方法函数参数写法上需要加上cls作为参数，但调用的时候不用加参数。
+
+```python
+class MyClass():
+    @classmethod
+    def thisIsClassMethod(cls,parameter):
+        print("this is a class method")
+        print(cls.__name__)
+        print(type(cls)) #打印类型为classobj
+if __name__ == "__main__":
+    MyClass.thisIsClassMethod(None) 
+    print(type(MyClass))
+'''
+this is a class method
+MyClass
+<class 'type'>
+<class 'type'>
+'''
+```
+
+### @staticmethod
+
+这时将对象方法转化成静态方法，可以被类直接调用
+
+```python
+class MyClass:
+    @staticmethod
+    def thisIsStaticMethod():
+        print("This is static method")
+if __name__ == "__main__":
+    MyClass.thisIsStaticMethod()
+
+#This is static method
+```
+
 
 
 参考：
 	https://zhuanlan.zhihu.com/p/109078881
+	https://zhuanlan.zhihu.com/p/265779360
 
 # 关于类的细节
 
@@ -188,7 +266,9 @@ class ...():
 
 2. 关于self
 
-   所有类中的方法都需要添加默认参数self(预定俗成，代表类自己。用其他名称也行，在函数内起作用)，静态方法除外。
+   (1)所有类中的方法都需要添加默认参数self(预定俗成，代表类自己。用其他名称也行，在函数内起作用)，静态方法除外。
+
+   (2)实例变量：用self修饰的变量。一般为公有，变量加前缀“__”成为==私有变量==，外部无法访问。
 
 3. 静态方法
 
@@ -197,8 +277,6 @@ class ...():
 ​		（2）不可以引用类中的属性或方法
 
 ​		（3）可以在不创建类实例的情况下调用+
-
-
 
 ​				
 
@@ -225,4 +303,6 @@ def g(x,y):
 	return x + y
 g = lambda x,y: x+y
 ```
+
+# 读写文件
 
